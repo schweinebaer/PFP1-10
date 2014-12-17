@@ -19,7 +19,8 @@ body{
 	width: 100%;
 	overflow: hidden;
 	height:100%;
-	background: url(../images/bgTop.jpg) center center no-repeat;
+	background: rgb(140,140,140);
+	/*background: url(../images/bgTop.jpg) center center no-repeat;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -48,7 +49,7 @@ body{
 	outline:1px solid #f00;
 }*/
 .logo{
-	margin-top: 60px;
+	margin-top: 20px;
 	font-family: 'Roboto', 'sans-serif';
 	font-size:30px;
 	font-weight:700;
@@ -328,7 +329,7 @@ border: none;
 	width: 100%;
 	overflow: hidden;
 	height:100%;
-	background: url(../images/bgTop.jpg) center center no-repeat;
+	background: rgb(140,140,140);
 	/*background:url(../images/line2.png) center center no-repeat;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -675,7 +676,7 @@ border: none;
 	width: 100%;
 	overflow: hidden;
 	height:100%;
-	background: url(../images/bgTop.jpg) center center no-repeat;
+	background: rgb(140,140,140);
 	/*background: url(../images/line3Bg.jpg) center center no-repeat;*/
 	/*background:#3f2d28;*/
 	-webkit-background-size: cover;
@@ -997,7 +998,7 @@ border: none;
 	width: 100%;
 	overflow: hidden;
 	height:100%;
-	background: url(../images/bgTop.jpg) center center no-repeat;
+	background: rgb(140,140,140);
 	/*background: url(../images/line4.png) center center no-repeat;*/
 	/*background:#3f2d28;*/
 	-webkit-background-size: cover;
@@ -1153,7 +1154,7 @@ border: none;
 	width: 100%;
 	overflow: hidden;
 	height:100%;
-	background: url(../images/bgTop.jpg) center center no-repeat;
+	background: rgb(140,140,140);
 	/*background: url(../images/line5Bg.jpg) center center no-repeat;	*/
 	/*background:#3f2d28;*/
 	-webkit-background-size: cover;
@@ -1347,22 +1348,7 @@ textarea {
 	overflow: hidden;
 	height: 700px;
 }
-.line6:after{
-	content: "";
-	position: absolute;
-	z-index: 1;
-	pointer-events: none;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 240px;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	border-bottom: 150px solid white;
-	border-left: 3000px solid transparent;
-}
+
 .line6:before{
 	top: 0;
 	display: block;
@@ -1432,7 +1418,7 @@ textarea {
 	overflow: hidden;
 	max-height:100%;
 	//background:#3f2d28;
-	background: url(../images/line7Bg.jpg) center center no-repeat;
+	background: rgb(140,140,140);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -1753,7 +1739,7 @@ textarea {
 	overflow: hidden;
 	height: 100%;
 	
-	background: url(../images/bgFooter.png)  no-repeat;
+	background: rgb(140,140,140);
 	background:#101010;
 }
 .downLine{
@@ -1766,21 +1752,7 @@ textarea {
 	font-weight: 300;
 	color:#fff;
 }
-.lineBlack:before{
-	top: 0;
-	content: "";
-	position: absolute;
-	z-index: 1;
-	pointer-events: none;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 178px;
-	background: url(../images/bgBeforFooter.png) center center no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+background-size: cover;
 }
 .lineBlack input{
 	margin-top: 3px;
@@ -1982,25 +1954,13 @@ margin-bottom: 35px !important;
 
 /* __________ Portfolio Item __________ */
 .portfolio_block {
+	height: 685px !important;
 	width:100%;
 }
 .portfolio_block .project .hover_img {
 	position:relative;
 }
-	/*background-color:#f9cdad;/
-/*.portfolio_block .project .hover_img:before {content:''; position:absolute; z-index:10; left:0; top:0; width:100%; height:100%; transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out;}
-.portfolio_block .project:hover .hover_img:before {background-color:rgba(0,0,0,0.38);}
-.portfolio_block .project .hover_img img {opacity:0.92;}
-.portfolio_block .hover_img .zoom {
-	display:block;
-	position:absolute;
-	z-index:100;
-	left:0;
-	top:0;
-	width:100%;
-	height:100%;
-	background: rgba(0,0,0,0);
-}*/
+
 .portfolio_block.project_descr {
 	position:relative;
 	padding:37px 10px 14px;
@@ -2018,14 +1978,6 @@ margin-bottom: 35px !important;
 
 
 
-/* Portfolio Item Single */
-/*.prev_next_links {
-    display: block;
-    float: left;
-}*/
-/*.prev_next_links a {
-    margin: 0 17px 20px 0;
-}*/
 
 
 
@@ -2061,10 +2013,10 @@ margin-bottom: 35px !important;
 		/*text-align:center;*/
 		z-index:999;
         position:fixed;
-        top: -65px; 
-        padding:20px 0;
+        top: -15px; 
+        padding:5px 0 0 0;
         width:100%;
-		background-color: #101010!important;
+		background-color: rgba(0, 0, 0, 0.75)
     }
 
 /**/
