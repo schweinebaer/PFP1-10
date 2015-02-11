@@ -53,6 +53,26 @@
 		lang: 'de'
 	}
 </script>
+
+<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET", "gethint.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+
 </head>
 
 <body>
@@ -471,12 +491,14 @@
 				<div class="col-md-9 col-xs-12 forma">
 					<form action="SEND ACTION TBD" method="POST">
 						<input type="text" class="col-md-6 col-xs-12 name" name='name'
-							placeholder='Name *' /> <input type="text"
-							class="col-md-6 col-xs-12 Email" name='Email'
-							placeholder='Email *' /> <input type="text"
+							placeholder='Name *' /> 
+						<input type="text" class="col-md-6 col-xs-12 Email" name='Email'
+							placeholder='Email *' /> 
+						<input type="text"
 							class="col-md-12 col-xs-12 Subject" name='Subject'
-							placeholder='Betreff' />
-						<textarea type="text" class="col-md-12 col-xs-12 Message"
+							placeholder='Betreff' onkeyup="showHint(this.value)" />	
+						<p>Suggestions: <span id="txtHint"></span></p>
+						<textarea class="col-md-12 col-xs-12 Message"
 							name='Message' placeholder='Nachricht *'></textarea>
 						<div class="cBtn col-xs-12">
 							<ul>
