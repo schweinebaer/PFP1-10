@@ -2,18 +2,22 @@
 <html lang="de">
 <head>
 <title>PFP 1-10</title>
+<link rel="shortcut icon" href="images/logo.ico">
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+	content="Diese Homepage ist Teil des PFP 1-10 Internetauftritts">
+<meta name="author" content="Benedikt Breitschopf und Dominik Brox">
+<meta name="keywords"
+	content="PFP1-10, Nachhilfe, Wiesloch, Wasserglasmethode">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link rel='stylesheet' id='camera-css' href='css/camera.css'
 	type='text/css' media='all'>
-
 <link rel="stylesheet" type="text/css" href="css/slicknav.css">
 <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css"
 	media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
-
 
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 
@@ -44,12 +48,14 @@
 		});
 	});
 </script>
-
+<script src="https://apis.google.com/js/platform.js" async defer>
+	{
+		lang: 'de'
+	}
+</script>
 </head>
+
 <body>
-
-	<!--home start-->
-
 	<div id="home">
 		<div class="headerLine">
 			<div id="menuF" class="default">
@@ -177,7 +183,6 @@
 				<div id="project1"></div>
 				<div class="row Ama">
 					<div class="col-md-12">
-
 						<h3>Wir bieten ...</h3>
 					</div>
 				</div>
@@ -464,7 +469,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9 col-xs-12 forma">
-					<form>
+					<form action="SEND ACTION TBD" method="POST">
 						<input type="text" class="col-md-6 col-xs-12 name" name='name'
 							placeholder='Name *' /> <input type="text"
 							class="col-md-6 col-xs-12 Email" name='Email'
@@ -475,8 +480,8 @@
 							name='Message' placeholder='Nachricht *'></textarea>
 						<div class="cBtn col-xs-12">
 							<ul>
-								<li class="clear"><a href="#"><i class="fa fa-times"></i>cancel</a></li>
-								<li class="send"><a href="#"><i class="fa fa-share"></i>senden</a></li>
+								<!--<li class="send"><a href="#"><i class="fa fa-share"></i>senden</a></li>-->
+								<input type="submit" class="send" value="senden">
 							</ul>
 						</div>
 					</form>
@@ -496,11 +501,6 @@
 			</div>
 		</div>
 		<div class="line6">
-			<!--  <iframe width="600" height="300" src="http://maps.google.de/maps?hl=de&q=Zum Keitelberg 7 69168 Wiesloch+(PFP 1-10)&ie=UTF8&t=&z=17&iwloc=A&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="http://www.siteway.de/maps-generator/" title="Karten kostenlos erstellen">(c) Homepage Karten Generator</a></iframe>
-				<br/>
-				<small><a href="http://www.siteway.de/maps-generator/" title="kostenloses Google Maps Tool">Google Karten Tool</a></small>
-				-->
-
 			<iframe
 				src="http://maps.google.de/maps?hl=de&q=Zum Keitelberg 7 69168 Wiesloch+(PFP 1-10)&ie=UTF8&t=&z=17&iwloc=A&output=embed"
 				width="100%" height="550" frameborder="0" style="border: 0"></iframe>
@@ -516,13 +516,13 @@
 							<li><a href="#ich">Über mich</a></li>
 							<li class="last"><a href="#contact">Kontakt</a></li>
 						</ul>
+						<div class="g-plusone" data-size="tall"
+							data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
 	<script src="js/jquery.prettyPhoto.js" type="text/javascript"
 		charset="utf-8"></script>
 	<script src="js/bootstrap.min.js"></script>

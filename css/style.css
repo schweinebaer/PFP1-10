@@ -385,9 +385,9 @@ border: none;
 	text-align: center;
 }
 .Fresh{
-	margin-bottom: 145px;
+	margin-bottom: 125px;
 	color: #fff;
-	margin-top: 250px;
+	margin-top: 25px;
 	text-align: center;
 	
 }
@@ -723,16 +723,16 @@ border: none;
 	//bottom: 489px;
 }
 .Ama{
-	margin-top: 201px;
-	margin-bottom: 133px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 /*	margin-top: 241px;
 	margin-bottom: 94px;*/
 }
 
 @media screen and (min-device-width:1919px) {   
 	.Ama {
-		margin-top: 246px;
-		margin-bottom: 164px;
+		margin-top: 150px;
+		margin-bottom: 100px;
 	}
 }
 .Ama h3{
@@ -1346,7 +1346,7 @@ textarea {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	height: 700px;
+	height: 480px;
 }
 
 .line6:before{
@@ -1737,14 +1737,14 @@ textarea {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	height: 100%;
+	height: 150px;
 	
 	background: rgb(140,140,140);
 	background:#101010;
 }
 .downLine{
 	margin-bottom: 35px;
-	margin-top: 127px;
+	margin-top: 12px;
 }
 .downLine p{
 	font-size:13px;
