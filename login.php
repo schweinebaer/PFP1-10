@@ -1,8 +1,8 @@
 <?php
     $_db_host = "localhost";            # meist localhost
     $_db_datenbank = "homepage";
-    $_db_username = "mysql-username";
-    $_db_passwort = "mysql-passwort";
+    $_db_username = "root";
+    $_db_passwort = "root";
 
     SESSION_START();
 
@@ -39,15 +39,24 @@
         $_passwort = mysql_real_escape_string($_POST["passwort"]);
 
         # Befehl für die MySQL Datenbank
-        $_sql = "SELECT * FROM login_usernamen WHERE
+        $_sql = "SELECT * FROM login_username WHERE
                     username='$_username' AND
-                    passwort='$_passwort' AND
+                    password='$_passwort' AND
                     user_geloescht=0
                 LIMIT 1";
 
         # Prüfen, ob der User in der Datenbank existiert !
-        $_res = mysql_query($_sql, $link);
-        $_anzahl = @mysql_num_rows($_res);
+        try {
+        	$_res = mysql_query($_sql, $link);
+        } catch (Exception $e) {
+        	echo "query klappt nicht";
+        };
+        try {
+        	$_anzahl = @mysql_num_rows($_res);
+        } catch (Exception $e) {
+        	echo "anzahlt wird nich erhöht";
+        }
+        
 
         # Die Anzahl der gefundenen Einträge überprüfen. Maximal
         # wird 1 Eintrag rausgefiltert (LIMIT 1). Wenn 0 Einträge
