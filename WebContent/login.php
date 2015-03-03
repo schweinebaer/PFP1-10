@@ -2,12 +2,12 @@
     $_db_host = "localhost";            # meist localhost
     $_db_datenbank = "homepage";
     $_db_username = "root";
-    $_db_passwort = "root";
+    $_db_password = "root";
 
     SESSION_START();
 
     # Datenbankverbindung herstellen
-    $link = mysql_connect($_db_host, $_db_username, $_db_passwort);
+    $link = mysql_connect($_db_host, $_db_username, $_db_password);
 
     # Hat die Verbindung geklappt ?
     if (!$link)
@@ -36,12 +36,12 @@
         # Mysql_real_escape ist auf jedenfall dem Befehle addslashes()
         # vorzuziehen !!! Ohne sind mysql injections möglich !!!!
         $_username = mysql_real_escape_string($_POST["username"]);
-        $_passwort = mysql_real_escape_string($_POST["passwort"]);
+        $_passwort = mysql_real_escape_string($_POST["password"]);
 
         # Befehl für die MySQL Datenbank
-        $_sql = "SELECT * FROM login_username WHERE
+        $_sql = "SELECT * FROM login_user WHERE
                     username='$_username' AND
-                    password='$_passwort' AND
+                    password='$_password' AND
                     user_geloescht=0
                 LIMIT 1";
 
@@ -74,7 +74,7 @@
             $_SESSION["user"] = mysql_fetch_array($_res, MYSQL_ASSOC);
 
             # Das Einlogdatum in der Tabelle setzen !
-            $_sql = "UPDATE login_usernamen SET letzter_login=NOW()
+            $_sql = "UPDATE login_user SET letzter_login=NOW()
                      WHERE id=".$_SESSION["user"]["id"];
             mysql_query($_sql);
             }

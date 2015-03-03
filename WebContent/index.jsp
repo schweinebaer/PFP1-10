@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page import="java.io.*,java.util.*" %>
+<%@ page pageEncoding="UTF-8" %>
 <html lang="de">
 <head>
 <title>PFP 1-10</title>
@@ -55,27 +56,41 @@
 </script>
 
 <script>
-function showHint(str) {
-    if (str.length == 0) { 
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open("GET", "gethint.php?q=" + str, true);
-        xmlhttp.send();
-    }
-}
+	function showHint(str) {
+		if (str.length == 0) {
+			document.getElementById("txtHint").innerHTML = "";
+			return;
+		} else {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET", "gethint.php?q=" + str, true);
+			xmlhttp.send();
+		}
+	}
 </script>
 
 
 </head>
 
 <body>
+<%
+    Integer hitsCount = 
+      (Integer)application.getAttribute("hitCounter");
+    if( hitsCount ==null || hitsCount == 0 ){
+       /* First visit */
+       
+       hitsCount = 1;
+    }else{
+       /* return visit */
+       
+       hitsCount += 1;
+    }
+    application.setAttribute("hitCounter", hitsCount);
+%>
 	<div id="home">
 		<div class="headerLine">
 			<div id="menuF" class="default">
@@ -102,7 +117,7 @@ function showHint(str) {
 					</div>
 				</div>
 			</div>
-			
+
 			<!--
 			
 			Neue Schlagwörter für Aufhänger:
@@ -187,16 +202,16 @@ function showHint(str) {
 				<h4>
 					ich freue mich, dass Sie sich für die Arbeit in der Pädagogischen
 					Förderpraxis interessieren. <br /> Die PFP1-10 fördert Kinder von
-					der 1.–10. Klasse.<br /> Jedes Kind ist etwas Besonderes und kommt
+					der 1.â10. Klasse.<br /> Jedes Kind ist etwas Besonderes und kommt
 					mit anderen Lernvorausetzungen in meine Praxis. <br /> Meine
 					Aufgabe besteht darin, ihr Kind an der Stufe abzuholen, wo es sich
-					vom Wissensstand her gerade befindet. <br /> Somit wird eine Über-
+					vom Wissensstand her gerade befindet. <br /> Somit wird eine über-
 					oder Unterforderung vermieden. Die Lernentwicklung der
 					Schüler/innen wird während des gesamten Förderzeitraums immer
 					beobachtet.<br /> <br /> Um diese hohe Individualität leisten zu
 					können, ist es selbstverständlich, dass nur im Einzel- oder
 					Partnerunterricht (Lernen zu zweit) gefördert wird!<br /> <br />
-					Ebenfalls lege ich großen Wert darauf, dass sich ihr Kind in meiner
+					Ebenfalls lege ich großen Wert darauf, dass sich ihr Kind in meiner
 					Praxis wohl fühlt. Ein gutes Lernklima bietet die optimale
 					Grundlage für Lernerfolg. <br /> Ich habe Ihnen hier die
 					wichtigsten Informationen über die PFP1-10 zusammengestellt und
@@ -272,7 +287,7 @@ function showHint(str) {
 	</div>
 
 
-	<!--project start-->
+	<!--foerderung start-->
 	<div id="foerderung">
 		<div class="line3">
 			<div class="container">
@@ -321,7 +336,7 @@ function showHint(str) {
 						<p>Eine Dyskalkulie ist eine Rechenschwäche, die durch
 							herkömmliche Nachhilfe meist nicht behoben werden kann. Die
 							Eltern werden in erster Linie durch schlechte Schulleistungen auf
-							diese Schwäche aufmerksam. Auch häufiges Üben bringt nicht den
+							diese Schwäche aufmerksam. Auch häufiges üben bringt nicht den
 							erwünschten Erfolg.</p>
 						<p>Woran erkenne ich, ob mein Kind rechenschwach ist?</p>
 						<ul>
@@ -335,7 +350,7 @@ function showHint(str) {
 							<li>über Zahlen bestehen nur abstrakte und keine konkreten
 								Vorstellungen (Bsp: Was kann ich mir für 35€ kaufen?)</li>
 						</ul>
-						<p>Handeln Sie früh. Eine Rechenschwäche „wächst“ sich nicht
+						<p>Handeln Sie früh. Eine Rechenschwäche âwächstâ sich nicht
 							von alleine heraus. Eine Rechentherapie wird nur im
 							Einzelunterricht angeboten.</p>
 					</div>
@@ -353,7 +368,7 @@ function showHint(str) {
 						<p>Ausländische Kinder haben es beim Erlernen der Deutschen
 							Sprache besonders schwer. Schnell werden diese Kinder dann in der
 							Schule im Fach Deutsch auffällig, weil sie sprachliche Defizite
-							haben. Dies muss nicht sein. „Spielerisch Deutsch lernen"- unter
+							haben. Dies muss nicht sein. âSpielerisch Deutsch lernen"- unter
 							diesem Motto bietet die Pädagogische Förderpraxis ein
 							kindgerechtes Sprachprogramm an.</p>
 						<p>Hier ein kleiner Auszug aus den Zielen unseres Förderplans:</p>
@@ -367,25 +382,25 @@ function showHint(str) {
 							<li>Erleichterung im Schulalltag durch erhöhte
 								Sprechsicherheit und gutes Sprachverständniss</li>
 						</ul>
-						<p>Die Förderung geschieht gemäß dem Alters und
+						<p>Die Förderung geschieht gemäß dem Alters und
 							Entwicklungsstand der Vor- und Grundschulkinder
 							ganzheitlich-spielerisch durch eine pädagogische Fachkraft.
 							Buchen Sie Einzel-, Partner- (Lernen zu zweit) oder
-							Gruppenunterricht in Einheiten à 45 Minuten.</p>
+							Gruppenunterricht in Einheiten ü  45 Minuten.</p>
 					</div>
 
 					<div class="element col-sm-4   gall text_styles">
 						<h4>Keine Angst vor Textaufgaben</h4>
 						<p>Dieser Kurs ist für Schüler/innen der 3., 4. und 5.Klasse.</p>
-						<p>Viele Kinder haben im Mathematikunterricht große Probleme
+						<p>Viele Kinder haben im Mathematikunterricht groüe Probleme
 							mit den Textaufgaben.</p>
 						<p>Dies muss nicht sein. Die Kinder lernen in diesem Kurs, wie
 							man Textaufgaben einfacher verstehen kann und somit die
 							schulische Leistung verbessert.</p>
 						<ul>
 							<li>Kursbeginn je nach Anmeldung</li>
-							<li>10 mal à 45 Minuten/Woche</li>
-							<li>Die Gruppengröße beträgt vier bis fünf Kinder.</li>
+							<li>10 mal ü  45 Minuten/Woche</li>
+							<li>Die Gruppengröüe beträgt vier bis fünf Kinder.</li>
 						</ul>
 					</div>
 				</div>
@@ -408,7 +423,7 @@ function showHint(str) {
 							lika_count : '45',
 							view_count : '100',
 							src : 'images/prettyPhotoImages/pic7.jpg',
-							title : 'Darko – Business Card Mock Up',
+							title : 'Darko â Business Card Mock Up',
 							content : ''
 						},
 
@@ -452,10 +467,10 @@ function showHint(str) {
 			<div class="row">
 				<div class="col-md-12 wwa">
 					<h3>
-						<br />Über mich
+						<br />über mich
 					</h3>
 					<h4>Mein Name ist Birgit Reimann-Groll und ich habe 2 Kinder.
-						Seit 2003 arbeite ich mit großer Freude in meiner Praxis.</h4>
+						Seit 2003 arbeite ich mit groüer Freude in meiner Praxis.</h4>
 				</div>
 			</div>
 		</div>
@@ -489,7 +504,7 @@ function showHint(str) {
 				<p>Die Arbeit mit Kindern hat mir schon immer viel Freude
 					gemacht.</p>
 				<h4>
-					Mein Pädagogisches Grundprinzip heißt:
+					Mein Pädagogisches Grundprinzip heißt:
 					<p>Ideal wäre es, wenn jedes Kind das "Seine" und nicht das
 						gleiche wie alle bekäme ... (Pestalozzi)</p>
 				</h4>
@@ -499,7 +514,7 @@ function showHint(str) {
 	<!--contact start-->
 
 	<div id="contact">
-		<div class="line5">
+		<div class="line5" style="height: 30px;">
 			<div class="container">
 				<div class="row Ama">
 					<div class="col-md-12">
@@ -512,16 +527,14 @@ function showHint(str) {
 			<div class="row">
 				<div class="col-md-9 col-xs-12 forma">
 					<form action="SEND ACTION TBD" method="POST">
-						<input type="text" class="col-md-6 col-xs-12 name" name='name'
-							placeholder='Name *' /> 
-						<input type="text" class="col-md-6 col-xs-12 Email" name='Email'
-							placeholder='Email *' /> 
-						<input type="text"
-							class="col-md-12 col-xs-12 Subject" name='Subject'
-							placeholder='Betreff' onkeyup="showHint(this.value)" />	
-						<p>Suggestions: <span id="txtHint"></span></p>
-						<textarea class="col-md-12 col-xs-12 Message"
-							name='Message' placeholder='Nachricht *'></textarea>
+						<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *' /> 
+						<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *' /> 
+						<input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Betreff' onkeyup="showHint(this.value)" />
+						<p>
+							Suggestions: <span id="txtHint"></span>
+						</p>
+						<textarea class="col-md-12 col-xs-12 Message" name='Message'
+							placeholder='Nachricht *'></textarea>
 						<div class="cBtn col-xs-12">
 							<ul>
 								<!--<li class="send"><a href="#"><i class="fa fa-share"></i>senden</a></li>-->
@@ -557,11 +570,15 @@ function showHint(str) {
 							<li class="active"><a href="#home">Home</a></li>
 							<li><a href="#bieten">Was bieten wir</a></li>
 							<li><a href="#foerderung">Förderungen</a></li>
-							<li><a href="#ich">Über mich</a></li>
+							<li><a href="#ich">über mich</a></li>
 							<li class="last"><a href="#contact">Kontakt</a></li>
+							<li><a href="login-formular.html">Login</a></li>
+							<li><a>Besucherzahl gesamt: <%= hitsCount%></a></li>
+							<li><a><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>
+							<li><a href="/FileDownloadExample/download">Download test file</a></li>
 						</ul>
-						<div class="g-plusone" data-size="tall"
-							data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div>
+						
+						
 					</div>
 				</div>
 			</div>
