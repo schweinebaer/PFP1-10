@@ -574,8 +574,9 @@
 							<li class="last"><a href="#contact">Kontakt</a></li>
 							<li><a href="login-formular.html">Login</a></li>
 							<li><a>Besucherzahl gesamt: <%= hitsCount%></a></li>
+							<li><li>To a <a href="hello">servlet</a>.</li>
 							<li><a><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>
-							<li><a href="/FileDownloadExample/download">Download test file</a></li>
+							<li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfp110&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe></li>
 						</ul>
 						
 						
