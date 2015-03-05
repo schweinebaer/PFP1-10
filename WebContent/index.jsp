@@ -254,8 +254,7 @@
 					<div class="col-md-4 Ver">
 						<i class="fa fa-cog"></i>
 						<h4>Lese-Rechtschreib-Schwäche</h4>
-						<p>Text TextText TextText TextText TextText TextText TextText
-							TextText Text</p>
+						<p>Text</p>
 					</div>
 					<div class="col-md-4 Fully">
 						<i class="fa fa-tablet"></i>
