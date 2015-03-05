@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html>
+<?php
+
+
+
+
+echo '<!DOCTYPE html>
+		<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -11,11 +16,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 col-xs-12 forma">
-				<form method="POST" action="http://localhost/kackordner/login.php">
-					<input type="text" class="col-md-6 col-xs-12 name" name='username'
-						placeholder='username *' /></br> <input type="password"
-						class="col-md-6 col-xs-12 name" name='password'
-						placeholder='password *' />
+				<form method="POST" action="http://localhost/Da SHIAT/WebContent/login.php">
+					<input type="text" class="col-md-6 col-xs-12 name" name="username"
+						placeholder="username *" /></br> <input type="password"
+						class="col-md-6 col-xs-12 name" name="password"
+						placeholder="password *" />
 					<div class="cBtn col-xs-12">
 						<input type=submit name=submit value="Einloggen">
 					</div>
@@ -25,4 +30,6 @@
 	</div>
 </div>
 </body>
-</html>
+</html>';
+
+?>

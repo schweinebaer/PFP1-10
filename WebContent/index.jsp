@@ -67,7 +67,7 @@
 					document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
 				}
 			}
-			xmlhttp.open("GET", "gethint.php?q=" + str, true);
+			xmlhttp.open("GET", "http://localhost:8080/Da SHIAT/WebContent/gethint.php?q=" + str, true);
 			xmlhttp.send();
 		}
 	}
@@ -572,9 +572,8 @@
 							<li><a href="#foerderung">Förderungen</a></li>
 							<li><a href="#ich">über mich</a></li>
 							<li class="last"><a href="#contact">Kontakt</a></li>
-							<li><a href="login-formular.html">Login</a></li>
+							<li><a href="http://localhost/Da SHIAT/WebContent/login-formular.php">Login</a></li>
 							<li><a>Besucherzahl gesamt: <%= hitsCount%></a></li>
-							<li><li>To a <a href="hello">servlet</a>.</li>
 							<li><a><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>
 							<li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfp110&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe></li>
 						</ul>
