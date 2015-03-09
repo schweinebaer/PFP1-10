@@ -328,8 +328,8 @@ border: none;
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	height:100%;
 	background: rgb(140,140,140);
+	padding-top: 12%;
 	/*background:url(../images/line2.png) center center no-repeat;*/
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -387,7 +387,6 @@ border: none;
 .Fresh{
 	margin-bottom: 125px;
 	color: #fff;
-	margin-top: 25px;
 	text-align: center;
 	
 }

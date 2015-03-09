@@ -1,5 +1,5 @@
-<%@ page import="java.io.*,java.util.*" %>
-<%@ page pageEncoding="UTF-8" %>
+<%@ page import="java.io.*,java.util.*"%>
+<%@ page pageEncoding="UTF-8"%>
 <html lang="de">
 <head>
 <title>PFP 1-10</title>
@@ -20,6 +20,9 @@
 	media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<!-- LIGHTBOX CSS -->
+<link href="css/lightbox.css" rel="stylesheet" />
+
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 
 <link
@@ -31,7 +34,12 @@
 <script type="text/javascript" src="js/myscript.js"></script>
 <script src="js/sorting.js" type="text/javascript"></script>
 <script src="js/jquery.isotope.js" type="text/javascript"></script>
-<!--script type="text/javascript" src="js/jquery.nav.js"></script-->
+
+<!-- LIGHTBOX JS -->
+
+<script src="js/lightbox.min.js" type="text/javascript"></script>
+
+
 
 
 <script>
@@ -67,7 +75,9 @@
 					document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
 				}
 			}
-			xmlhttp.open("GET", "http://localhost:8080/Da SHIAT/WebContent/gethint.php?q=" + str, true);
+			xmlhttp.open("GET",
+					"http://localhost:8080/Da SHIAT/WebContent/gethint.php?q="
+							+ str, true);
 			xmlhttp.send();
 		}
 	}
@@ -77,7 +87,7 @@
 </head>
 
 <body>
-<%
+	<%
     Integer hitsCount = 
       (Integer)application.getAttribute("hitCounter");
     if( hitsCount ==null || hitsCount == 0 ){
@@ -202,17 +212,17 @@
 				<h4>
 					ich freue mich, dass Sie sich für die Arbeit in der Pädagogischen
 					Förderpraxis interessieren. <br /> Die PFP1-10 fördert Kinder von
-					der 1.â10. Klasse.<br /> Jedes Kind ist etwas Besonderes und kommt
-					mit anderen Lernvorausetzungen in meine Praxis. <br /> Meine
+					der 1.â10. Klasse.<br /> Jedes Kind ist etwas Besonderes und
+					kommt mit anderen Lernvorausetzungen in meine Praxis. <br /> Meine
 					Aufgabe besteht darin, ihr Kind an der Stufe abzuholen, wo es sich
-					vom Wissensstand her gerade befindet. <br /> Somit wird eine über-
-					oder Unterforderung vermieden. Die Lernentwicklung der
+					vom Wissensstand her gerade befindet. <br /> Somit wird eine
+					über- oder Unterforderung vermieden. Die Lernentwicklung der
 					Schüler/innen wird während des gesamten Förderzeitraums immer
 					beobachtet.<br /> <br /> Um diese hohe Individualität leisten zu
 					können, ist es selbstverständlich, dass nur im Einzel- oder
 					Partnerunterricht (Lernen zu zweit) gefördert wird!<br /> <br />
-					Ebenfalls lege ich großen Wert darauf, dass sich ihr Kind in meiner
-					Praxis wohl fühlt. Ein gutes Lernklima bietet die optimale
+					Ebenfalls lege ich großen Wert darauf, dass sich ihr Kind in
+					meiner Praxis wohl fühlt. Ein gutes Lernklima bietet die optimale
 					Grundlage für Lernerfolg. <br /> Ich habe Ihnen hier die
 					wichtigsten Informationen über die PFP1-10 zusammengestellt und
 					hoffe, dass ich Ihnen weiterhelfen kann.<br /> Sollten Sie noch
@@ -236,14 +246,7 @@
 	<!--bieten start-->
 	<div id="bieten">
 		<div class="line2">
-			<div class="container">
-				<div id="project1"></div>
-				<div class="row Ama">
-					<div class="col-md-12">
-						<h3>Wir bieten ...</h3>
-					</div>
-				</div>
-			</div>
+
 			<div class="container">
 				<div class="row Fresh">
 					<div class="col-md-4 Des">
@@ -288,18 +291,6 @@
 
 	<!--foerderung start-->
 	<div id="foerderung">
-		<div class="line3">
-			<div class="container">
-				<div id="project1"></div>
-				<div class="row Ama">
-					<div class="col-md-12">
-
-						<h3>Förderungen</h3>
-						<p>Kurzer Text über individuelle Förderungsangebote</p>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="container">
 
@@ -349,8 +340,8 @@
 							<li>über Zahlen bestehen nur abstrakte und keine konkreten
 								Vorstellungen (Bsp: Was kann ich mir für 35€ kaufen?)</li>
 						</ul>
-						<p>Handeln Sie früh. Eine Rechenschwäche âwächstâ sich nicht
-							von alleine heraus. Eine Rechentherapie wird nur im
+						<p>Handeln Sie früh. Eine Rechenschwäche âwächstâ sich
+							nicht von alleine heraus. Eine Rechentherapie wird nur im
 							Einzelunterricht angeboten.</p>
 					</div>
 
@@ -367,8 +358,8 @@
 						<p>Ausländische Kinder haben es beim Erlernen der Deutschen
 							Sprache besonders schwer. Schnell werden diese Kinder dann in der
 							Schule im Fach Deutsch auffällig, weil sie sprachliche Defizite
-							haben. Dies muss nicht sein. âSpielerisch Deutsch lernen"- unter
-							diesem Motto bietet die Pädagogische Förderpraxis ein
+							haben. Dies muss nicht sein. âSpielerisch Deutsch lernen"-
+							unter diesem Motto bietet die Pädagogische Förderpraxis ein
 							kindgerechtes Sprachprogramm an.</p>
 						<p>Hier ein kleiner Auszug aus den Zielen unseres Förderplans:</p>
 						<ul>
@@ -453,6 +444,31 @@
 			</div>
 		</div>
 	</div>
+
+	<!--ich bildergalerie-->
+	<div id="bildergalerie">
+		<div class="container">
+			<div class="row">
+
+				
+				<h3><br/><br/>Bildergalarie</h3>
+				
+				<a href="img/1.jpg" data-lightbox="roadtrip"><img src="img/1.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
+				<a href="img/2.jpg" data-lightbox="roadtrip"><img src="img/2.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
+				<a href="img/3.jpg" data-lightbox="roadtrip"><img src="img/3.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
+				<a href="img/4.jpg" data-lightbox="roadtrip"><img src="img/4.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
+				<a href="img/5.jpg" data-lightbox="roadtrip"><img src="img/5.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
+				<a href="img/6.jpg" data-lightbox="roadtrip"><img src="img/6.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
+				<a href="img/7.jpg" data-lightbox="roadtrip"><img src="img/7.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
+				
+
+
+
+
+			</div>
+		</div>
+	</div>
+
 	<!--ich start-->
 	<div id="ich">
 		<div class="container">
@@ -526,9 +542,12 @@
 			<div class="row">
 				<div class="col-md-9 col-xs-12 forma">
 					<form action="SEND ACTION TBD" method="POST">
-						<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *' /> 
-						<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *' /> 
-						<input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Betreff' onkeyup="showHint(this.value)" />
+						<input type="text" class="col-md-6 col-xs-12 name" name='name'
+							placeholder='Name *' /> <input type="text"
+							class="col-md-6 col-xs-12 Email" name='Email'
+							placeholder='Email *' /> <input type="text"
+							class="col-md-12 col-xs-12 Subject" name='Subject'
+							placeholder='Betreff' onkeyup="showHint(this.value)" />
 						<p>
 							Suggestions: <span id="txtHint"></span>
 						</p>
@@ -571,13 +590,19 @@
 							<li><a href="#foerderung">Förderungen</a></li>
 							<li><a href="#ich">über mich</a></li>
 							<li class="last"><a href="#contact">Kontakt</a></li>
-							<li><a href="http://localhost/Da SHIAT/WebContent/login-formular.php">Login</a></li>
+							<li><a
+								href="http://localhost/Da SHIAT/WebContent/login-formular.php">Login</a></li>
 							<li><a>Besucherzahl gesamt: <%= hitsCount%></a></li>
-							<li><a><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>
-							<li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfp110&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe></li>
+							<li><a><div class="g-plusone" data-size="tall"
+										data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>
+							<li><iframe
+									src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfp110&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=65"
+									scrolling="no" frameborder="0"
+									style="border: none; overflow: hidden; height: 65px;"
+									allowTransparency="true"></iframe></li>
 						</ul>
-						
-						
+
+
 					</div>
 				</div>
 			</div>
