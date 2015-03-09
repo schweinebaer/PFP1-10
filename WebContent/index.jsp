@@ -543,11 +543,16 @@
 				<div class="col-md-9 col-xs-12 forma">
 					<form action="SEND ACTION TBD" method="POST">
 						<input type="text" class="col-md-6 col-xs-12 name" name='name'
-							placeholder='Name *' /> <input type="text"
+							placeholder='Name *' /> 
+						<input type="text"
 							class="col-md-6 col-xs-12 Email" name='Email'
 							placeholder='Email *' /> <input type="text"
 							class="col-md-12 col-xs-12 Subject" name='Subject'
-							placeholder='Betreff' onkeyup="showHint(this.value)" />
+							placeholder='Betreff' onkeyup="showHint(this.value)" list=sexes />
+						<datalist id=sexes>
+ 							<option value="Anfrage">
+  							<option value="Information">
+ 						</datalist>
 						<p>
 							Suggestions: <span id="txtHint"></span>
 						</p>
