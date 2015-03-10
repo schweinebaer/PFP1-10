@@ -9,7 +9,7 @@
     # Datenbankverbindung herstellen
     $link = mysql_connect($_db_host, $_db_username, $_db_password);
 
-    # Hat die Verbindung geklappt ?
+    # Hat die Verbindung geklappt SPAST?
     if (!$link)
         {
         die("Keine Datenbankverbindung möglich: " . mysql_error());
