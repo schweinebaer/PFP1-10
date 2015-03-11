@@ -283,6 +283,9 @@
 						<p>Text TextText TextText TextText TextText TextText TextText
 							TextText Text</p>
 					</div>
+					<div>
+					<a class="button" href="http://localhost:8080/PFP_1-10/testPath">Flyer</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -450,17 +453,28 @@
 		<div class="container">
 			<div class="row">
 
-				
-				<h3><br/><br/>Bildergalarie</h3>
-				
-				<a href="img/1.jpg" data-lightbox="roadtrip"><img src="img/1.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
-				<a href="img/2.jpg" data-lightbox="roadtrip"><img src="img/2.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
-				<a href="img/3.jpg" data-lightbox="roadtrip"><img src="img/3.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
-				<a href="img/4.jpg" data-lightbox="roadtrip"><img src="img/4.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
-				<a href="img/5.jpg" data-lightbox="roadtrip"><img src="img/5.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
-				<a href="img/6.jpg" data-lightbox="roadtrip"><img src="img/6.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
-				<a href="img/7.jpg" data-lightbox="roadtrip"><img src="img/7.jpg" style="border-radius: 15px" height="100" width="100" alt="" /></a>
-				
+
+				<h3>
+					<br />
+					<br />Bildergalarie
+				</h3>
+
+				<a href="img/1.jpg" data-lightbox="roadtrip"><img
+					src="img/1.jpg" style="border-radius: 15px" height="100"
+					width="100" alt="" /></a> <a href="img/2.jpg" data-lightbox="roadtrip"><img
+					src="img/2.jpg" style="border-radius: 15px" height="100"
+					width="100" alt="" /></a> <a href="img/3.jpg" data-lightbox="roadtrip"><img
+					src="img/3.jpg" style="border-radius: 15px" height="100"
+					width="100" alt="" /></a> <a href="img/4.jpg" data-lightbox="roadtrip"><img
+					src="img/4.jpg" style="border-radius: 15px" height="100"
+					width="100" alt="" /></a> <a href="img/5.jpg" data-lightbox="roadtrip"><img
+					src="img/5.jpg" style="border-radius: 15px" height="100"
+					width="100" alt="" /></a> <a href="img/6.jpg" data-lightbox="roadtrip"><img
+					src="img/6.jpg" style="border-radius: 15px" height="100"
+					width="100" alt="" /></a> <a href="img/7.jpg" data-lightbox="roadtrip"><img
+					src="img/7.jpg" style="border-radius: 15px" height="100"
+					width="100" alt="" /></a>
+
 
 
 
@@ -539,20 +553,19 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
+			<div class="rowContact">
 				<div class="col-md-9 col-xs-12 forma">
 					<form action="SEND ACTION TBD" method="POST">
 						<input type="text" class="col-md-6 col-xs-12 name" name='name'
-							placeholder='Name *' /> 
-						<input type="text"
+							placeholder='Name *' /> <input type="text"
 							class="col-md-6 col-xs-12 Email" name='Email'
 							placeholder='Email *' /> <input type="text"
 							class="col-md-12 col-xs-12 Subject" name='Subject'
 							placeholder='Betreff' onkeyup="showHint(this.value)" list=sexes />
 						<datalist id=sexes>
- 							<option value="Anfrage">
-  							<option value="Information">
- 						</datalist>
+							<option value="Anfrage">
+							<option value="Information">
+						</datalist>
 						<p>
 							Suggestions: <span id="txtHint"></span>
 						</p>
@@ -581,9 +594,12 @@
 			</div>
 		</div>
 		<div class="line6">
+
+
 			<iframe
-				src="http://maps.google.de/maps?hl=de&q=Zum Keitelberg 7 69168 Wiesloch+(PFP 1-10)&ie=UTF8&t=&z=17&iwloc=A&output=embed"
-				width="100%" height="550" frameborder="0" style="border: 0"></iframe>
+				src="http://maps.google.de/maps?hl=de&q=Zum Keitelberg 7, 69168 Wiesloch+(PFP 1-10)&ie=UTF8&t=&z=17&iwloc=B&output=embed"
+				width="100%" height="550" frameborder="0" scrolling="no"
+				marginheight="0" marginwidth="0" style="border: 0"></iframe>
 		</div>
 		<div class="lineBlack">
 			<div class="container">

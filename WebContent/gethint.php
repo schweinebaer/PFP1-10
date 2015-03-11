@@ -1,34 +1,34 @@
 <?php
 // Array with names
-$a[] = "Anfrage";
-$a[] = "Nachhilfe";
-$a[] = "Aufsatz";
-$a[] = "Rechtschreibung";
-$a[] = "Lese-Rechtschreib-Schwäche";
-$a[] = "Aufsatz";
-$a[] = "Dyskalkulie";
-$a[] = "Rechenschwäche";
+$a [] = "Anfrage";
+$a [] = "Nachhilfe";
+$a [] = "Aufsatz";
+$a [] = "Rechtschreibung";
+$a [] = "Lese-Rechtschreib-Schwäche";
+$a [] = "Aufsatz";
+$a [] = "Dyskalkulie";
+$a [] = "Rechenschwäche";
 
 // get the q parameter from URL
-$q = $_REQUEST["q"];
+$q = $_REQUEST ["q"];
 
 $hint = "";
 
-// lookup all hints from array if $q is different from "" 
+// lookup all hints from array if $q is different from ""
 if ($q !== "") {
-    $q = strtolower($q);
-    $len=strlen($q);
-    foreach($a as $name) {
-        if (stristr($q, substr($name, 0, $len))) {
-            if ($hint === "") {
-                $hint = $name;
-            } else {
-                $hint .= ", $name";
-            }
-        }
-    }
+	$q = strtolower ( $q );
+	$len = strlen ( $q );
+	foreach ( $a as $name ) {
+		if (stristr ( $q, substr ( $name, 0, $len ) )) {
+			if ($hint === "") {
+				$hint = $name;
+			} else {
+				$hint .= ", $name";
+			}
+		}
+	}
 }
 
-// Output "no suggestion" if no hint was found or output correct values 
+// Output "no suggestion" if no hint was found or output correct values
 echo $hint === "" ? "no suggestion" : $hint;
 ?>
