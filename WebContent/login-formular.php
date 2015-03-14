@@ -1,4 +1,5 @@
 <?php
+
 echo '<!DOCTYPE html>
 		<html>
 <head>
@@ -6,19 +7,20 @@ echo '<!DOCTYPE html>
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body> 
 <div align="center"	>
 	<h3>Login</h3>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9 col-xs-12 forma">
 				<form method="POST" action="http://localhost/Da SHIAT/WebContent/login.php">
-					<input type="text" class="col-md-6 col-xs-12 name" name="Username"
-						placeholder="username *" /></br> <input type="Password"
+					<input type="text" class="col-md-6 col-xs-12 name" name="username"
+						placeholder="username *" /></br> <input type="password"
 						class="col-md-6 col-xs-12 name" name="password"
 						placeholder="password *" />
 					<div class="cBtn col-xs-12">
 						<input type=submit name=submit value="Einloggen">
+						<input type="button" onclick=window.open("graphic.php") value="Random ID" />
 					</div>
 				</form>
 			</div>
@@ -27,5 +29,6 @@ echo '<!DOCTYPE html>
 </div>
 </body>
 </html>';
+
 
 ?>
