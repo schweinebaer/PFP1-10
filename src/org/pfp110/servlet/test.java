@@ -34,7 +34,7 @@ public class test extends HttpServlet {
 		   
 		
 		        // reads input file from an absolute path
-		        String filePath = "C:/Users/D053188/git/PFP1-10_HP/WebContent/flyer.pdf";
+		        String filePath = "C:/Users/Benedikt/git/PFP1-10/WebContent/flyer.pdf";
 		        File downloadFile = new File(filePath);
 		        FileInputStream inStream = new FileInputStream(downloadFile);
 		         
