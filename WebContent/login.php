@@ -32,7 +32,32 @@ $row = mysql_fetch_object($ergebnis);
 if($row->passwort == $passwort) 
     { 
     $_SESSION["username"] = $username; 
-    echo "Login erfolgreich. <br> <a href=\"geheim.php\">Geschützer Bereich</a>"; 
+    echo "<!DOCTYPE html>
+<html>
+<head>
+<meta charset='ISO-8859-1'>
+<title>Eingeloggt</title>
+<link rel='stylesheet' type='text/css' href='css/style.css'>
+</head>
+<body>
+<div align='center'	>
+	<h3>Login</h3>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-9 col-xs-12 forma'>
+				Login erfolgreich. <br> Weiter zu <a href='geheim.php'>geschützem Bereich</a>'
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>";
+		
+		
+		
+		
+		; 
     } 
 else 
     { 
