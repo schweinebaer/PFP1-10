@@ -13,8 +13,8 @@ echo '<!DOCTYPE html>
 		<div class="row">
 			<div class="col-md-9 col-xs-12 forma">
 				<form method="POST" action="http://localhost/Da SHIAT/WebContent/login.php">
-					<input type="text" class="col-md-6 col-xs-12 name" name="username"
-						placeholder="username *" /></br> <input type="password"
+					<input type="text" class="col-md-6 col-xs-12 name" name="Username"
+						placeholder="username *" /></br> <input type="Password"
 						class="col-md-6 col-xs-12 name" name="password"
 						placeholder="password *" />
 					<div class="cBtn col-xs-12">

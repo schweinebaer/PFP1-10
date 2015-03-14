@@ -1,4 +1,11 @@
 <?php
+
+//Cookie
+setcookie("username","valentin",time()+(3600*24));
+$cookie = $_COOKIE["username"];
+echo "Der Inhalt des Cookies: $cookie";
+
+
 $_db_host = "localhost"; // meist localhost
 $_db_datenbank = "homepage";
 $_db_username = "root";
