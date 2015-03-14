@@ -1,4 +1,4 @@
-<%@ page import="java.io.*,java.util.*"%>
+<%@ page import="java.io.*,java.util.*,java.sql.*"%>
 <%@ page pageEncoding="UTF-8"%>
 <html lang="de">
 <head>
@@ -88,19 +88,20 @@
 
 <body>
 	<%
-    Integer hitsCount = 
-      (Integer)application.getAttribute("hitCounter");
-    if( hitsCount ==null || hitsCount == 0 ){
-       /* First visit */
-       
-       hitsCount = 1;
-    }else{
-       /* return visit */
-       
-       hitsCount += 1;
-    }
-    application.setAttribute("hitCounter", hitsCount);
-%>
+		Integer hitsCount = (Integer) application
+				.getAttribute("hitCounter");
+		if (hitsCount == null || hitsCount == 0) {
+			/* First visit */
+
+			hitsCount = 1;
+		} else {
+			/* return visit */
+
+			hitsCount += 1;
+		}
+		application.setAttribute("hitCounter", hitsCount);
+	%>
+
 	<div id="home">
 		<div class="headerLine">
 			<div id="menuF" class="default">
@@ -195,8 +196,7 @@
 			<div class="col-md-4 project">
 				<h3 id="counter1">0</h3>
 				<h4>Happy Kids</h4>
-				<p>So viele Kinder haben schon erfolgreich bei mir gelernt. Text
-					blabla</p>
+				<p>So viele Kinder haben schon erfolgreich bei mir gelernt. </p>
 			</div>
 			<div class="col-md-4 project">
 				<h3 id="counter2" style="margin-left: 20px;">0</h3>
@@ -228,8 +228,40 @@
 					hoffe, dass ich Ihnen weiterhelfen kann.<br /> Sollten Sie noch
 					Fragen haben, dann können Sie mich gerne von Montag bis Mittwoch
 					zwischen 9.00-11.00 Uhr unter der Nummer: 06222/386112 anrufen.<br />
-					<br /> Birgit Breitschopf-Reimann
+					<br /> Birgit Breitschopf-Reimann<br /> <br />
 				</h4>
+				<div>
+					<h2>News:</h2>
+					<h2>
+						<marquee direction="up" scrollamount="2" style="height: 200px;">
+							<%
+								Connection conn = null;
+								ResultSet result = null;
+								Statement stmt = null;
+								ResultSetMetaData rsmd = null;
+								try {
+									Class c = Class.forName("com.mysql.jdbc.Driver");
+								} catch (Exception e) {
+									out.write("Error!!!!!!" + e);
+								}
+								try {
+									conn = DriverManager.getConnection(
+											"jdbc:mysql://127.0.0.1/user", "root", "");
+								} catch (SQLException e) {
+									System.out.println("Error!" + e);
+								}
+								PreparedStatement ps = (PreparedStatement) conn
+										.prepareStatement("SELECT * from news");
+								result = ps.executeQuery();
+								while (result.next()) {
+									String id = result.getString("id");
+									String news = result.getString("news");
+									out.println(news + "<hr>");
+								}
+							%>
+						</marquee>
+					</h2>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -284,7 +316,7 @@
 							TextText Text</p>
 					</div>
 					<div>
-					<a class="button" href="http://localhost:8080/PFP_1-10/testPath">Flyer</a>
+						<a class="button" href="http://localhost:8080/PFP_1-10/testPath">Flyer</a>
 					</div>
 				</div>
 			</div>
@@ -455,8 +487,7 @@
 
 
 				<h3>
-					<br />
-					<br />Bildergalarie
+					<br /> <br />Bildergalarie
 				</h3>
 
 				<a href="img/1.jpg" data-lightbox="roadtrip"><img
@@ -496,7 +527,7 @@
 			<div class="row">
 				<div class="col-md-12 wwa">
 					<h3>
-						<br />über mich
+						<br />Über mich
 					</h3>
 					<h4>Mein Name ist Birgit Reimann-Groll und ich habe 2 Kinder.
 						Seit 2003 arbeite ich mit groüer Freude in meiner Praxis.</h4>
@@ -609,11 +640,11 @@
 							<li class="active"><a href="#home">Home</a></li>
 							<li><a href="#bieten">Was bieten wir</a></li>
 							<li><a href="#foerderung">Förderungen</a></li>
-							<li><a href="#ich">über mich</a></li>
+							<li><a href="#ich">Über mich</a></li>
 							<li class="last"><a href="#contact">Kontakt</a></li>
 							<li><a
-								href="http://localhost/Da SHIAT/WebContent/login-formular.php">Login</a></li>
-							<li><a>Besucherzahl gesamt: <%= hitsCount%></a></li>
+								href="http://localhost/PFP1-10/login-formular.php">Login</a></li>
+							<li><a>Besucherzahl gesamt: <%=hitsCount%></a></li>
 							<li><a><div class="g-plusone" data-size="tall"
 										data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>
 							<li><iframe
