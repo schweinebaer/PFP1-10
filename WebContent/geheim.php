@@ -1,17 +1,17 @@
 <?php
-session_start ();
+session_start();
 ?>
 
 <?php
 if (! isset ( $_SESSION ["username"] )) {
-	echo "Bitte erst <a href=\"login-formular.html\">einloggen</a>";
+	echo "Bitte erst <a href=\"http://mannbaerschwein.raspctl.com/login-formular.html\">einloggen</a>";
 	exit ();
 }
 ?> 
 
 <?php
 if (isset ( $_POST ['submit'] )) {
-	mysql_connect ( "localhost", "root", "" );
+	mysql_connect ( "localhost", "root", "Fischk0pf" );
 	mysql_select_db ( "user" );
 	
 	$author = trim ( escape ( $_POST ['author'] ) );

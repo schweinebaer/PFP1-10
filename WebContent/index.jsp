@@ -246,7 +246,7 @@
 								}
 								try {
 									conn = DriverManager.getConnection(
-											"jdbc:mysql://127.0.0.1/user", "root", "");
+											"jdbc:mysql://localhost/user", "root", "");
 								} catch (SQLException e) {
 									System.out.println("Error!" + e);
 								}
@@ -643,7 +643,7 @@
 							<li><a href="#ich">Über mich</a></li>
 							<li class="last"><a href="#contact">Kontakt</a></li>
 							<li><a
-								href="http://localhost/PFP1-10/login-formular.html">Login</a></li>
+								href="http://mannbaerschwein.raspctl.com/login-formular.html">Login</a></li>
 							<li><a>Besucherzahl gesamt: <%=hitsCount%></a></li>
 							<li><a><div class="g-plusone" data-size="tall"
 										data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>

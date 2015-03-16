@@ -2,24 +2,9 @@
 session_start();
 ?>
 
-<?php
-$cookie_name = "user";
-$cookie_value = $_POST['username'];
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-?>
-
-<?php
-if(!isset($_COOKIE[$cookie_name])) {
-    echo "Cookie '" . $cookie_name . "' wurde zuvor noch nicht gesetzt!";
-} else {
-    echo "Cookie '" . $cookie_name . "' wurde bereits gesetzt!<br>";
-    echo "Willkommen zurück " . $_COOKIE[$cookie_name];
-}
-?>
-
 <?php 
-$verbindung = mysql_connect("localhost", "root" , "") 
-or die("Verbindung zur Datenbank konnte nicht hergestellt werden"); 
+$verbindung = mysql_connect("localhost", "root" , "Fischk0pf") 
+or die(mysql_error()); 
 mysql_select_db("homepage") or die ("Datenbank konnte nicht ausgewählt werden"); 
 
 $username = $_POST["username"]; 
@@ -30,8 +15,22 @@ $ergebnis = mysql_query($abfrage);
 $row = mysql_fetch_object($ergebnis); 
 
 if($row->passwort == $passwort) 
-    { 
+    {
+    //Session
     $_SESSION["username"] = $username; 
+    
+    //Cookie
+    $cookie_name = "Username";
+    $cookie_value = $_POST['username'];
+    if(!isset($_COOKIE[$cookie_name])) {
+    	echo "Der Cookie mit dem Wert '" . $cookie_name . "' war noch nicht gesetzt, wir aber nun gespeichert";
+    	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 Tag
+    } else {
+    	echo "Cookie '" . $cookie_name . "' is gespeichert für 1 Tag!<br>";
+    	echo "Username: " . $_COOKIE[$cookie_name];
+    };
+    
+    //HTML
     echo "<!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +44,7 @@ if($row->passwort == $passwort)
 	<div class='container'>
 		<div class='row'>
 			<div class='col-md-9 col-xs-12 forma'>
-				Login erfolgreich. <br> Weiter zu <a href='geheim.php'>geschützem Bereich</a>'
+				Login erfolgreich. <br> Weiter zum <a href='http://mannbaerschwein.raspctl.com/geheim.php'>Eingabebereich (geschützer Bereich)</a>
 			</div>
 		</div>
 	</div>
@@ -53,15 +52,10 @@ if($row->passwort == $passwort)
 
 </body>
 </html>";
-		
-		
-		
-		
-		; 
     } 
 else 
     { 
-    echo "Benutzername und/oder Passwort waren falsch. <a href=\"login.html\">Login</a>"; 
+    echo "Benutzername und/oder Passwort waren falsch. <a href=\"http://mannbaerschwein.raspctl.com/login-formular.html\">Login</a>"; 
     } 
 
 ?>
