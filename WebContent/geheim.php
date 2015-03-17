@@ -50,6 +50,7 @@ function escape($str) {
 							<label for="news">Beitrag</label>
 							<textarea name="news" class="col-md-12 col-xs-12 Message" id="news" cols="40" rows="10"></textarea><br /> 
 							<input type="submit" name="submit" value="News speichern" />
+							<input type="button" onclick="location.href = 'http://mannbaerschwein.raspctl.com/logout.php';" value="Ausloggen" />
 					</div>
 				</form>
 			</div>

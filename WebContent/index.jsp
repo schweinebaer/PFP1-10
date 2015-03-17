@@ -317,12 +317,10 @@
 							TextText Text</p>
 					</div>
 					<div>
-						<object type="application/x-java-applet" width="512"
-							height="512" code="ClockHand.class" >
+						<object type="application/x-java-applet" width="300"
+							height="300" code="ClockHand.class" >
 							<p>You do not have Java available, or it is disabled.</p>
 						</object>
-						<embed type="application/x-java-applet;version=1.6" width="512"
-							height="512" code="ClockHand.class" />
 					</div>
 					<div>
 						<a class="button" href="http://localhost:8080/PFP_1-10/testPath">Flyer</a>
