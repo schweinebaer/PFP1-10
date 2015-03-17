@@ -196,7 +196,7 @@
 			<div class="col-md-4 project">
 				<h3 id="counter1">0</h3>
 				<h4>Happy Kids</h4>
-				<p>So viele Kinder haben schon erfolgreich bei mir gelernt. </p>
+				<p>So viele Kinder haben schon erfolgreich bei mir gelernt.</p>
 			</div>
 			<div class="col-md-4 project">
 				<h3 id="counter2" style="margin-left: 20px;">0</h3>
@@ -209,6 +209,7 @@
 		<div class="row">
 			<div class="col-md-12 cBusiness">
 				<h3>Liebe Eltern,</h3>
+
 				<h4>
 					ich freue mich, dass Sie sich für die Arbeit in der Pädagogischen
 					Förderpraxis interessieren. <br /> Die PFP1-10 fördert Kinder von
@@ -314,6 +315,14 @@
 						<h4>Weitere Sachen möglich - Bilder pass ich an</h4>
 						<p>Text TextText TextText TextText TextText TextText TextText
 							TextText Text</p>
+					</div>
+					<div>
+						<object type="application/x-java-applet" width="512"
+							height="512" code="ClockHand.class" >
+							<p>You do not have Java available, or it is disabled.</p>
+						</object>
+						<embed type="application/x-java-applet;version=1.6" width="512"
+							height="512" code="ClockHand.class" />
 					</div>
 					<div>
 						<a class="button" href="http://localhost:8080/PFP_1-10/testPath">Flyer</a>
