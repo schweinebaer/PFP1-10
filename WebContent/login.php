@@ -26,7 +26,7 @@ if($row->passwort == $passwort)
     	echo "Der Cookie mit dem Wert '" . $cookie_name . "' war noch nicht gesetzt, wir aber nun gespeichert";
     	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 Tag
     } else {
-    	echo "Cookie '" . $cookie_name . "' is gespeichert für 1 Tag!<br>";
+    	echo "Cookie '" . $cookie_name . "' is gespeichert für 30 Tag!<br>";
     	echo "Username: " . $_COOKIE[$cookie_name];
     };
     
