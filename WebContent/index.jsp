@@ -317,11 +317,16 @@
 							TextText Text</p>
 					</div>
 					<div>
-						<object type="application/x-java-applet" width="300"
+						<object type="application/x-java-applet" width="200"
 							height="300" code="ClockHand.class" >
 							<p>You do not have Java available, or it is disabled.</p>
 						</object>
 					</div>
+					<br/>
+					<div>
+						<jsp:useBean id="date" class="java.util.Date" /><p>Datum und Uhrzeit: <%= date %></p>
+					</div>
+					<br/>
 					<div>
 						<a class="button" href="http://localhost:8080/PFP_1-10/testPath">Flyer</a>
 					</div>
@@ -654,11 +659,11 @@
 							<li><a>Besucherzahl gesamt: <%=hitsCount%></a></li>
 							<li><a><div class="g-plusone" data-size="tall"
 										data-href="https://plus.google.com/105131388230813270240/about?hl=de&amp;_ga=1.55639080.2097408583.1423662793"></div></a></li>
-							<li><iframe
+							<li><a><iframe
 									src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpfp110&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=65"
 									scrolling="no" frameborder="0"
 									style="border: none; overflow: hidden; height: 65px;"
-									allowTransparency="true"></iframe></li>
+									allowTransparency="true"></iframe></a></li>
 						</ul>
 
 

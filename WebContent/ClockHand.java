@@ -12,8 +12,8 @@ public class ClockHand extends java.applet.Applet implements Runnable {
 		setLayout(new BorderLayout());
 		pan = new Panel();
 		pan2 = new Panel();
-		setBackground(new Color(0, 0, 120));
-		setForeground(Color.gray);
+		setBackground(new Color(140, 140, 140));
+		setForeground(Color.white);
 		Label date = new Label(theDate, Label.CENTER);
 		pan2.add(date);
 		add("Center", pan);
@@ -65,10 +65,10 @@ public class ClockHand extends java.applet.Applet implements Runnable {
 
 	public void setUp() {
 		Graphics g = pan.getGraphics();
-		g.setColor(Color.gray);
+		g.setColor(new Color(31, 205, 255));
 		g.drawRect(1, 1, 197, 197);
 		g.drawRect(3, 3, 193, 195);
-		g.setColor(new Color(160, 150, 170));
+		g.setColor(new Color(31, 205, 255));
 		g.drawString("1", 138, 30);
 		g.drawString("2", 170, 60);
 		g.drawString("3", 180, 105);
@@ -81,7 +81,7 @@ public class ClockHand extends java.applet.Applet implements Runnable {
 		g.drawString("10", 18, 60);
 		g.drawString("11", 51, 30);
 		g.drawString("12", 93, 20);
-		g.setColor(new Color(30, 30, 150));
+		g.setColor(new Color(140, 140, 140));
 		g.fillOval(25, 25, 150, 149);
 		g = pan2.getGraphics();
 		g.drawRect(1, 1, 197, 30);
@@ -119,7 +119,7 @@ public class ClockHand extends java.applet.Applet implements Runnable {
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
-		g2.setColor(new Color(0, 0, 90));
+		g2.setColor(new Color(31, 205, 255));
 		g2.fillOval(30, 30, 140, 140);
 		g2.setColor(Color.gray);
 		g2.drawOval(98, 98, 4, 4);
